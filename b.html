@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StartupMatch | Find Your Perfect Tech Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4df2c0;
+            --light: #f8f9fa;            
+            --secondary: #4df2c0;
+            --dark: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7ff;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #4df2c0 0%, #4d44db 100%);
+            color: white;
+            padding: 5rem 0;
+        }
+        
+        .feature-card {
+            transition: transform 0.3s;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            border-color: var(--secondary);
+        }
+        
+        .event-card {
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .event-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .match-score {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #4df2c0 0%, #4df2c0 100%);
+        }
+        
+        .filter-section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-rocket me-2" style="color: var(--primary);"></i>
+                StartupMatch
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Accelerators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hackathons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <a href="more.html" class="btn btn-outline-primary me-2">Login</a>
+                    <a href="sign.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Find the perfect events for your startup</h1>
+                    <p class="lead mb-4">Our AI-powered platform matches you with the most relevant tech events, hackathons, and accelerators based on your startup's stage and goals.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-light btn-lg px-4">Get Matched</a>
+                        <a href="#" class="btn btn-outline-light btn-lg px-4">How It Works</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">How StartupMatch Works</h2>
+                <p class="text-muted">Three simple steps to find your perfect event match</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 p-4 text-center">
+                        <div class="mb-3">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 d-inline-block">
+                                <i class="fas fa-user fa-2x"></i>
+                            </div>
+                        </div>
+                        <h4>Create Profile</h4>
+                        <p class="text-muted">Tell us about your startup's stage, industry, and goals.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 p-4 text-center">
+                        <div class="mb-3">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 d-inline-block">
+                                <i class="fas fa-robot fa-2x"></i>
+                            </div>
+                        </div>
+                        <h4>Get Matches</h4>
+                        <p class="text-muted">Our algorithm finds the most relevant events for you.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card card h-100 p-4 text-center">
+                        <div class="mb-3">
+                            <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-3 d-inline-block">
+                                <i class="fas fa-calendar-check fa-2x"></i>
+                            </div>
+                        </div>
+                        <h4>Apply & Attend</h4>
+                        <p class="text-muted">Connect with events and grow your startup network.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Startup Profile Form -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Tell Us About Your Startup</h2>
+                            <form id="startupProfileForm">
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Startup Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your startup name">
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Industry</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select your industry</option>
+                                        <option>Artificial Intelligence</option>
+                                        <option>Fintech</option>
+                                        <option>Healthtech</option>
+                                        <option>Edtech</option>
+                                        <option>Cleantech</option>
+                                        <option>SaaS</option>
+                                        <option>E-commerce</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Current Stage</label>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <input type="radio" class="btn-check" name="stage" id="preSeed" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="preSeed">Pre-Seed</label>
+                                        
+                                        <input type="radio" class="btn-check" name="stage" id="seed" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="seed">Seed</label>
+                                        
+                                        <input type="radio" class="btn-check" name="stage" id="seriesA" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="seriesA">Series A</label>
+                                        
+                                        <input type="radio" class="btn-check" name="stage" id="growth" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="growth">Growth</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Primary Goals</label>
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <input type="checkbox" class="btn-check" id="fundraising" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="fundraising">Fundraising</label>
+                                        
+                                        <input type="checkbox" class="btn-check" id="networking" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="networking">Networking</label>
+                                        
+                                        <input type="checkbox" class="btn-check" id="talent" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="talent">Talent Acquisition</label>
+                                        
+                                        <input type="checkbox" class="btn-check" id="mentorship" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="mentorship">Mentorship</label>
+                                        
+                                        <input type="checkbox" class="btn-check" id="exposure" autocomplete="off">
+                                        <label class="btn btn-outline-primary" for="exposure">Brand Exposure</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Team Size</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select team size</option>
+                                        <option>1 (Solo Founder)</option>
+                                        <option>2-5</option>
+                                        <option>6-10</option>
+                                        <option>11-20</option>
+                                        <option>21-50</option>
+                                        <option>50+</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <label class="form-label fw-bold">Funding Status</label>
+                                    <select class="form-select">
+                                        <option selected disabled>Select funding status</option>
+                                        <option>Bootstrapped</option>
+                                        <option>Angel Investment</option>
+                                        <option>VC Backed</option>
+                                        <option>Government Grants</option>
+                                        <option>Crowdfunded</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary btn-lg">Find My Matches</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Matches Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="fw-bold mb-0">Your Top Matches</h2>
+                <div>
+                    <button class="btn btn-outline-secondary me-2">Filter <i class="fas fa-sliders-h ms-1"></i></button>
+                    <button class="btn btn-outline-secondary">Sort By <i class="fas fa-arrow-down-a-z ms-1"></i></button>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="filter-section">
+                        <h5 class="fw-bold mb-3">Refine Matches</h5>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Event Type</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="hackathons" checked>
+                                <label class="form-check-label" for="hackathons">Hackathons</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="conferences" checked>
+                                <label class="form-check-label" for="conferences">Conferences</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="accelerators" checked>
+                                <label class="form-check-label" for="accelerators">Accelerators</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="demoDays" checked>
+                                <label class="form-check-label" for="demoDays">Demo Days</label>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Location</label>
+                            <select class="form-select">
+                                <option selected>Anywhere</option>
+                                <option>North America</option>
+                                <option>Europe</option>
+                                <option>Asia</option>
+                                <option>Online/Virtual</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Date Range</label>
+                            <select class="form-select">
+                                <option selected>Next 3 Months</option>
+                                <option>Next Month</option>
+                                <option>Next 6 Months</option>
+                                <option>Custom Range</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Match Score</label>
+                            <input type="range" class="form-range" min="0" max="100" value="70">
+                            <div class="d-flex justify-content-between">
+                                <small>70%+</small>
+                                <small>100%</small>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary w-100">Apply Filters</button>
+                    </div>
+                </div>
+                
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <!-- Event Card 1 -->
+                        <div class="col-md-6">
+                            <div class="event-card card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <span class="badge bg-success">Accelerator</span>
+                                        <div class="match-score">92%</div>
+                                    </div>
+                                    <h4 class="card-title">Y Combinator Winter 2024</h4>
+                                    <p class="card-text text-muted">The world's most prestigious startup accelerator with $500k funding.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Jan 15 - Mar 30, 2024</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>San Francisco / Remote</li>
+                                        <li class="mb-2"><i class="fas fa-dollar-sign me-2 text-primary"></i>$500k for 7% equity</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Details</a>
+                                        <small class="text-muted">Deadline: Dec 15</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Event Card 2 -->
+                        <div class="col-md-6">
+                            <div class="event-card card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <span class="badge bg-info">Hackathon</span>
+                                        <div class="match-score">88%</div>
+                                    </div>
+                                    <h4 class="card-title">AI Innovation Challenge</h4>
+                                    <p class="card-text text-muted">Build AI solutions for healthcare with $100k in prizes.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Feb 5-7, 2024</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Virtual</li>
+                                        <li class="mb-2"><i class="fas fa-dollar-sign me-2 text-primary"></i>$100k total prizes</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Details</a>
+                                        <small class="text-muted">Deadline: Jan 20</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Event Card 3 -->
+                        <div class="col-md-6">
+                            <div class="event-card card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <span class="badge bg-warning text-dark">Conference</span>
+                                        <div class="match-score">85%</div>
+                                    </div>
+                                    <h4 class="card-title">Web Summit 2024</h4>
+                                    <p class="card-text text-muted">The world's largest tech conference with 70,000+ attendees.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>Nov 11-14, 2024</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Lisbon, Portugal</li>
+                                        <li class="mb-2"><i class="fas fa-dollar-sign me-2 text-primary"></i>Startup tickets €950</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Details</a>
+                                        <small class="text-muted">Early bird until Mar 1</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Event Card 4 -->
+                        <div class="col-md-6">
+                            <div class="event-card card h-100">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-start mb-3">
+                                        <span class="badge bg-danger">Demo Day</span>
+                                        <div class="match-score">79%</div>
+                                    </div>
+                                    <h4 class="card-title">Seattle TechStars Demo Day</h4>
+                                    <p class="card-text text-muted">Pitch to 300+ investors in the Pacific Northwest.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-calendar-alt me-2 text-primary"></i>May 15, 2024</li>
+                                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Seattle, WA</li>
+                                        <li class="mb-2"><i class="fas fa-dollar-sign me-2 text-primary"></i>Free for qualified startups</li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer bg-transparent border-top-0">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Details</a>
+                                        <small class="text-muted">Apply by Apr 1</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <nav aria-label="Page navigation" class="mt-4">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1">Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Trusted by Thousands of Startups</h2>
+                <p class="text-muted">Hear from founders who found their perfect matches</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"StartupMatch connected us with the perfect accelerator for our stage. We got into Techstars and raised $2M within 6 months!"</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Founder">
+                                <div>
+                                    <h6 class="mb-0">Sarah Johnson</h6>
+                                    <small class="text-muted">CEO, AIHealth</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text">"The hackathon we found through StartupMatch led to our first major client. The matching algorithm really understands what startups need."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Founder">
+                                <div>
+                                    <h6 class="mb-0">Michael Chen</h6>
+                                    <small class="text-muted">CTO, Finova</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text">"As a solo founder, I didn't have time to research events. StartupMatch saved me dozens of hours and found better options than I would have."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Founder">
+                                <div>
+                                    <h6 class="mb-0">David Rodriguez</h6>
+                                    <small class="text-muted">Founder, EduTrack</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-4">Ready to Find Your Perfect Event Match?</h2>
+                    <p class="lead mb-4">Join thousands of startups growing faster with our intelligent matching platform.</p>
+                    <a href="#" class="btn btn-light btn-lg px-4 me-2">Get Started</a>
+                    <a href="#" class="btn btn-outline-light btn-lg px-4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">
+                        <i class="fas fa-rocket me-2"></i>StartupMatch
+                    </h5>
+                    <p class="text-muted">The intelligent platform connecting startups with their perfect events, accelerators, and hackathons.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white mb-4">Product</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Features</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Pricing</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">API</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white mb-4">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Guides</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h6 class="text-white mb-4">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Partners</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="text-white mb-4">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Privacy</
